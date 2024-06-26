@@ -9,7 +9,26 @@
     <link rel="stylesheet" href="./Assets/style.css">
 </head>
 <body>
+<div class="filterButtons">
+    <button onclick="allItems()" class="animated-button">All Items</button>
+    <!-- men's clothing -->
+    <button class="animated-button" onclick="filteredItems(this)" >Men's clothing</button>
+    <!-- jewelery -->
+    <button onclick="filteredItems(this)" class="animated-button">Jewelery</button>
+    <!-- electronics -->
+    <button onclick="filteredItems(this)" class="animated-button">Electronics</button>
+    <!-- women's clothing -->
+    <button onclick="filteredItems(this)" class="animated-button">Women's clothing</button>
+</div>
     
+    <div id="div"></div>
+
+
+
+
+
+    <!-- Axios Cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
     <!-- JavaScript Link -->
     <script src="app.js"></script>

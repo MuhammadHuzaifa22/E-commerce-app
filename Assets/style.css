@@ -3,3 +3,185 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 43vh;
+    border-radius: 14px;
+    margin-top: 15px;
+    z-index: 1111;
+    background: yellow;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px #bebebe, -2px -2px 5px #ffffff;
+    ;
+  }
+  
+  .bg {
+    position: absolute;
+    width: 230px;
+    height: 40vh;
+    margin: auto;
+    z-index: 2;
+    background: rgba(255, 255, 255, .95);
+    /* backdrop-filter: blur(24px); */
+    border-radius: 10px;
+    overflow: hidden;
+    /* outline: 2px solid white; */
+  }
+  
+  .blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: blue;
+    /* opacity: 1; */
+    /* filter: blur(12px); */
+    animation: blob-bounce 5s infinite ease;
+  }
+  
+  @keyframes blob-bounce {
+    0% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+  
+    50% {
+      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+  
+    75% {
+      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  }
+  
+
+  .newBg{
+    padding: 3%;
+    margin-left: 1%;
+    width: 230px;
+  }
+  .newBg img{
+    margin-top: 2%;
+    margin-left: 20%;
+    height: 15vh;
+  }
+  
+
+  #div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2%;
+    gap: 2%;
+  }
+
+  .title{
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+  .animated-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid white;
+    color: black;
+    border-radius: 10px;
+    background: linear-gradient(to right, blue 20%, yellow 10%);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  body {
+    background: linear-gradient(to right, #1c3144, white); /* Dark Blue to Dark Yellow gradient */
+    height: 100vh; /* Full viewport height */
+    /* margin: 0; */
+     /* Remove default margin */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-family: Arial, sans-serif;
+    /* color: #fff;  */
+    /* Text color to white for contrast */
+  }
+  /* .content {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+  } */
+  
+  .animated-button::before {
+    content: '';
+    position: absolute;
+    background-color: blue;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  .animated-button:hover::before {
+    transform: translate(-5%, -12%) scale(1);
+  }
+  
+  .animated-button span {
+    position: relative;
+    z-index: 1;
+  }
+  .cart-button {
+    background-color: blue; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.cart-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.cart-button:active {
+    background-color: #004080; /* Even darker blue on click */
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+.cart-icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+.added {
+  background-color: #ffc107; /* Yellow background after adding */
+  color: #333;
+}
